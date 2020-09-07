@@ -1,0 +1,11 @@
+.user_data{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vh;
+    justify-content: space-between;
+}
+
+.user_info{
+    padding: 10vh;
+    font-size: 2vh;
+}
