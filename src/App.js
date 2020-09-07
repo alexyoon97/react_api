@@ -18,10 +18,10 @@ class App extends React.Component {
       const {user_profiles, isFetching, key_value } = this.state;
       return (
         <div className="container">
-          <button>Post</button>
-          <button>Comments</button>
-          <button>Albums</button>
-          <button>Photos</button>
+          <button onClick={() => this.fetch_Data("https://jsonplaceholder.typicode.com/posts")}>Post</button>
+          <button onClick={() => this.fetch_Data("https://jsonplaceholder.typicode.com/comments")}>Comments</button>
+          <button onClick={() => this.fetch_Data("https://jsonplaceholder.typicode.com/albums")}>Albums</button>
+          <button onClick={() => this.fetch_Data("https://jsonplaceholder.typicode.com/photos")}>Photos</button>
           <button onClick={() => this.fetch_Data("https://jsonplaceholder.typicode.com/todos")}>To do</button>
           <button onClick={() => this.fetch_Data("https://jsonplaceholder.typicode.com/users")}>Users</button>
 
