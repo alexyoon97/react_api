@@ -70,9 +70,10 @@ class App extends React.Component {
             </div>
           ) : (
             (console.log(user_profiles),
-            Object.keys(user_profiles.data).map(([key, i]) => (
+            Object.keys(user_profiles.data).map(([key], i) => (
               <div className="user_info">
-                {Object.keys(user_profiles.data[key]).map((cate, i) => (
+                <div className="card_id">#{i + 1}</div>
+                {Object.keys(user_profiles.data[key]).map((cate) => (
                   <div>
                     {cate} : {user_profiles.data[key].username}
                   </div>

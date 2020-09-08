@@ -6,7 +6,8 @@
 
 }
 .api_call_buttons button{
-    font-size: 20px;
+    padding: 5px;
+    font-size: 18px;
     background-color: transparent;
     outline-style: none;
     border: none;
@@ -18,6 +19,12 @@
     border-radius: 8px;
 }
 
+.card_id{
+    position: relative;
+    left: -20px;
+    top: -20px;
+    font-size: 1.5vh;
+}
 .user_data{
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +33,8 @@
 }
 
 .user_info{
-    padding: 10vh;
+    margin: 2vh;
+    padding: 5vh;
     font-size: 2vh;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
 }
