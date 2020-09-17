@@ -5,20 +5,27 @@
     margin-top: 50px;
 
 }
-.api_call_buttons button{
+
+.button{
     padding: 5px;
     font-size: 18px;
     background-color: transparent;
     outline-style: none;
     border: none;
-    
 }
 
-.api_call_buttons button:hover{
+.button:hover{
     background-color: rgba(128, 128, 128, 0.411);
     border-radius: 8px;
 }
-
+.selected{
+    padding: 5px;
+    font-size: 18px;
+    outline-style: none;
+    border: none;
+    background-color:  rgba(149, 149, 149, 0.897);
+    border-radius: 8px;
+}
 .card_id{
     position: relative;
     left: -20px;
@@ -38,3 +45,4 @@
     font-size: 1.5vh;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
 }
+

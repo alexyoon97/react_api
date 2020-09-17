@@ -1,69 +1,69 @@
 import React from "react"
 
-const List_data = (user_profiles, currentSelection) =>{
+const List_data = (imported_data) =>{
     return(
-      console.log(user_profiles.user_profiles.data),
-        Object.keys(user_profiles.user_profiles.data).map(([key], i) => (
+      console.log(imported_data.user_profiles.data),
+        Object.keys(imported_data.user_profiles.data).map(([key], i) => (
             <div className="user_info">
               <div className="card_id">#{i + 1}</div>
               {(() => {
-                console.log(user_profiles.currentSelection)
-                if(user_profiles.currentSelection === "Posts"){
+                console.log(imported_data.currentSelection)
+                if(imported_data.currentSelection === "Posts"){
                   return(
                     <div>
-                      userID : {user_profiles.user_profiles.data[key].userId}<br></br>
-                      Title : {user_profiles.user_profiles.data[key].title}<br></br>
-                      Body : {user_profiles.user_profiles.data[key].body}<br></br>
+                      userID : {imported_data.user_profiles.data[key].userId}<br></br>
+                      Title : {imported_data.user_profiles.data[key].title}<br></br>
+                      Body : {imported_data.user_profiles.data[key].body}<br></br>
                     </div>
 
                   )
                 }
-                else if(user_profiles.currentSelection === "Comments"){
+                else if(imported_data.currentSelection === "Comments"){
                   return(
                     <div>
-                      postID : {user_profiles.user_profiles.data[key].postId}<br></br>
-                      name : {user_profiles.user_profiles.data[key].name}<br></br>
-                      Email : {user_profiles.user_profiles.data[key].email}<br></br>
-                      Body : {user_profiles.user_profiles.data[key].body}<br></br>
+                      postID : {imported_data.user_profiles.data[key].postId}<br></br>
+                      name : {imported_data.user_profiles.data[key].name}<br></br>
+                      Email : {imported_data.user_profiles.data[key].email}<br></br>
+                      Body : {imported_data.user_profiles.data[key].body}<br></br>
                     </div>
 
                   )
                 }
-                else if(user_profiles.currentSelection === "Albums"){
+                else if(imported_data.currentSelection === "Albums"){
                   return(
                     <div>
-                      userID : {user_profiles.user_profiles.data[key].userId}<br></br>
-                      title : {user_profiles.user_profiles.data[key].title}<br></br>
+                      userID : {imported_data.user_profiles.data[key].userId}<br></br>
+                      title : {imported_data.user_profiles.data[key].title}<br></br>
                     </div>
                     
                   )
                 }
-                else if(user_profiles.currentSelection === "Photos"){
+                else if(imported_data.currentSelection === "Photos"){
                   return(
                     <div>
-                      albumID : {user_profiles.user_profiles.data[key].albumId}<br></br>
-                      Title : {user_profiles.user_profiles.data[key].title}<br></br>
-                      Photo :  <img src={user_profiles.user_profiles.data[key].url}></img><br></br>
+                      albumID : {imported_data.user_profiles.data[key].albumId}<br></br>
+                      Title : {imported_data.user_profiles.data[key].title}<br></br>
+                      Photo :  <img src={imported_data.user_profiles.data[key].url}></img><br></br>
                     </div>
                     
                   )
                 }
-                else if(user_profiles.currentSelection === "Todos"){
+                else if(imported_data.currentSelection === "Todos"){
                   return(
                     <div>
-                      userID : {user_profiles.user_profiles.data[key].userId}<br></br>
-                      Title : {user_profiles.user_profiles.data[key].title}<br></br>
-                      Completed : {user_profiles.user_profiles.data[key].completed.toString()}<br></br>
+                      userID : {imported_data.user_profiles.data[key].userId}<br></br>
+                      Title : {imported_data.user_profiles.data[key].title}<br></br>
+                      Completed : {String(imported_data.user_profiles.data[key].completed)}<br></br>
                     </div>
                   )
                 }
                 else{
                   return(
                     <div>
-                      Name : {user_profiles.user_profiles.data[key].name}<br></br>
-                      Username : {user_profiles.user_profiles.data[key].username}<br></br>
-                      Email : {user_profiles.user_profiles.data[key].email}<br></br>
-                      Phone : {user_profiles.user_profiles.data[key].phone}<br></br>
+                      Name : {imported_data.user_profiles.data[key].name}<br></br>
+                      Username : {imported_data.user_profiles.data[key].username}<br></br>
+                      Email : {imported_data.user_profiles.data[key].email}<br></br>
+                      Phone : {imported_data.user_profiles.data[key].phone}<br></br>
                     </div>
                   )
                 }

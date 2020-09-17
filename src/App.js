@@ -8,12 +8,14 @@ class App extends React.Component {
   state = {
     isFetching: true,
     user_profiles: [],
-    currentSelection : ""
+    currentSelection : "",
+    selected_button: ""
   };
 
   changeSelection = (target) => {
-    this.setState((prevState) => {
-      return { currentSelection : target}
+    this.setState({
+      currentSelection : target,
+      selected_button : target
     })
   }
 
@@ -23,11 +25,12 @@ class App extends React.Component {
     this.setState({ user_profiles, isFetching: false });
   }
   render() {
-    const { user_profiles, isFetching, currentSelection } = this.state;
+    const { user_profiles, isFetching, currentSelection, selected_button } = this.state;
     return (
       <div className="container">
         <div className="api_call_buttons">
           <button
+            className={selected_button === "Posts" ? 'selected' : 'button'}
             onClick={
               () => this.fetch_Data("https://jsonplaceholder.typicode.com/posts", "Posts")
             }
@@ -35,6 +38,7 @@ class App extends React.Component {
             Post
           </button>
           <button
+            className={selected_button === "Comments" ? 'selected' : 'button'}
             onClick={() =>
               this.fetch_Data("https://jsonplaceholder.typicode.com/comments", "Comments")
             }
@@ -42,6 +46,7 @@ class App extends React.Component {
             Comments
           </button>
           <button
+            className={selected_button === "Albums" ? 'selected' : 'button'}
             onClick={() =>
               this.fetch_Data("https://jsonplaceholder.typicode.com/albums", "Albums")
             }
@@ -49,6 +54,7 @@ class App extends React.Component {
             Albums
           </button>
           <button
+            className={selected_button === "Photos" ? 'selected' : 'button'}
             onClick={() =>
               this.fetch_Data("https://jsonplaceholder.typicode.com/photos", "Photos")
             }
@@ -56,6 +62,7 @@ class App extends React.Component {
             Photos
           </button>
           <button
+            className={selected_button === "Todos" ? 'selected' : 'button'}
             onClick={() =>
               this.fetch_Data("https://jsonplaceholder.typicode.com/todos", "Todos")
             }
@@ -63,6 +70,7 @@ class App extends React.Component {
             To do
           </button>
           <button
+            className={selected_button === "Users" ? 'selected' : 'button'}
             onClick={() =>
               this.fetch_Data("https://jsonplaceholder.typicode.com/users", "Users")
             }
