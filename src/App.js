@@ -79,7 +79,7 @@ class App extends React.Component {
           </button>
         </div>
 
-        <div className="user_data">
+        <div >
           {isFetching ? (
             <div className="loader">
               <span className="loader__text">Please Choose one</span>
